@@ -1,0 +1,118 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a4a, #141421);
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.favorites {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.favorites h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.favorites-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.favorites-empty h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.favorites-empty p {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.book-card-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.book-card {
+  background: linear-gradient(160deg, #2d2d3f, #1a1a2e);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.8);
+}
+
+/* Book info inside card */
+.book-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 4px 0;
+}
+
+.fav-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #ff4d6d;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.fav-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+@media (max-width: 768px) {
+  .favorites {
+    padding: 10px;
+  }
+  .book-card {
+    padding: 16px;
+  }
+  .fav-button {
+    top: 8px;
+    right: 8px;
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+}
